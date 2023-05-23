@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1050.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scenebuilderproject.controllers.AgentDashboardController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="576.0" prefWidth="256.0" style="-fx-background-color: #05071F;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="109.0" fitWidth="123.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="50.0" />
+               </VBox.margin></ImageView>
+            <Label text="MARATHON" textFill="#e7e5e5">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Label>
+            <VBox prefHeight="483.0" prefWidth="256.0">
+               <children>
+                  <Button fx:id="btnOverview" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Overview" textFill="#e7e5e5">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Home_32px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="btnRunners" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Runners">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Open_Envelope_32px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="btnLeaderBaord" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Leader Board">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_GPS_Antenna_64px_1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="btnSignout" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#Signout" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Sign Out">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Sign_Out_32px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="170.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <StackPane layoutX="258.0" prefHeight="576.0" prefWidth="793.0" style="-fx-background-color: #02030A;">
+         <children>
+            <Pane fx:id="pnlRunners" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <GridPane layoutX="118.0" layoutY="121.0" prefHeight="234.0" prefWidth="369.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="273.799951171875" minWidth="10.0" prefWidth="127.6" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="273.799951171875" minWidth="10.0" prefWidth="22.80000000000001" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.1999633789062" minWidth="10.0" prefWidth="253.2" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="111.20001220703125" minHeight="111.20001220703125" prefHeight="111.20001220703125" />
+                        <RowConstraints maxHeight="111.20001220703125" minHeight="111.20001220703125" prefHeight="111.20001220703125" />
+                        <RowConstraints maxHeight="141.5999969482422" minHeight="10.0" prefHeight="11.599987792968747" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <VBox prefHeight="112.0" prefWidth="230.0" spacing="25.0">
+                           <children>
+                              <Label text="Record Race Time" textFill="WHITE" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </VBox>
+                        <VBox prefHeight="112.0" prefWidth="214.0" spacing="15.0" GridPane.columnIndex="2">
+                           <children>
+                              <TextField fx:id="recordRaceTimeRunner" prefHeight="27.0" prefWidth="219.0" style="-fx-border-color: center; -fx-background-color: #0000; -fx-border-color: #ffff; -fx-border-radius: 20; -fx-text-fill: #ffff;">
+                                 <VBox.margin>
+                                    <Insets right="80.0" />
+                                 </VBox.margin></TextField>
+                              <HBox prefHeight="38.0" prefWidth="172.0" spacing="20.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#consultRunners" prefHeight="27.0" prefWidth="74.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 50;" text="CONSULT" textFill="WHITE" />
+                                    <Button mnemonicParsing="false" onAction="#updateRunner" prefHeight="27.0" prefWidth="70.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 50;" text="UPDATE" textFill="WHITE" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="50.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </GridPane>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="53.0" prefWidth="241.0" text="Runners" textFill="#e7e5e5">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tableViewRunners" layoutX="16.0" layoutY="281.0" prefHeight="271.0" prefWidth="765.0" style="-fx-background-color: #0000; -fx-border-color: #ffff; -fx-border-radius: 0 0 30 30;" stylesheets="@style.css">
+                     <columns>
+                        <TableColumn fx:id="ColFirstNameRunner" prefWidth="180.79998779296875" style="-fx-background-color: #0000; -fx-border-color: #ffff;" text="First Name" />
+                        <TableColumn fx:id="ColLastNameRunner" prefWidth="200.00003051757812" style="-fx-background-color: #0000; -fx-border-color: #ffff;" text="Last Name" />
+                        <TableColumn fx:id="ColRecordRunner" prefWidth="236.00006103515625" style="-fx-background-color: #0000; -fx-border-color: #ffff;" text="Record" />
+                        <TableColumn fx:id="ColGenderRunner" prefWidth="147.99993896484375" style="-fx-background-color: #0000; -fx-border-color: #ffff;" text="Gender" />
+                     </columns>
+                  </TableView>
+                  <MFXButton layoutX="751.0" layoutY="14.0" onAction="#Quit" style="-fx-background-color: #0000;" text="X" textFill="WHITE" />
+               </children></Pane>
+            <Pane fx:id="pnlOverview" prefHeight="554.0" prefWidth="793.0" visible="false">
+               <children>
+                  <Label layoutX="45.0" layoutY="34.0" prefHeight="35.0" prefWidth="144.0" text="Dashboard" textFill="#e7e5e5">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="78.0" prefHeight="92.0" prefWidth="499.0" spacing="50.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="nbrRunners" text="0" textFill="#2a73ff">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Runners" textFill="#e7e5e5" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="nbrAgents" text="0" textFill="#26bfbc">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Agents" textFill="#e7e5e5" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="nbrSponsors" text="0" textFill="#fa5f7e">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Sponsors" textFill="#e7e5e5" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="45.0" layoutY="179.0" prefHeight="116.0" prefWidth="271.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="109.0" spacing="25.0">
+                           <children>
+                              <Label text="Marathon Name:" textFill="#e7e5e5" />
+                              <Label text="Location:" textFill="#e7e5e5" />
+                              <Label prefHeight="18.0" prefWidth="75.0" text="Start Time:" textFill="#e7e5e5" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="154.0" prefWidth="186.0" spacing="25.0">
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <children>
+                              <Label fx:id="marathonNameLabel" textFill="#a9a2a2" />
+                              <Label fx:id="LocationLabel" textFill="#a9a2a2" />
+                              <Label fx:id="startTimeLabel" textFill="#a9a2a2" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="376.0" layoutY="179.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="25.0">
+                           <children>
+                              <Label text="Winner:" textFill="#e7e5e5" />
+                              <Label text="Distance: (km):" textFill="#e7e5e5" />
+                              <Label prefHeight="18.0" prefWidth="70.0" text="End Time:" textFill="#e7e5e5" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="154.0" prefWidth="139.0" spacing="25.0">
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <children>
+                              <Label fx:id="winnerLabel" textFill="#a9a2a2" />
+                              <Label fx:id="distanceLabel" textFill="#a9a2a2" />
+                              <Label fx:id="endTimeLabel" textFill="#a9a2a2" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tableViewSponsors" layoutX="45.0" layoutY="324.0" prefHeight="219.0" prefWidth="725.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 0 0 30 30;" stylesheets="@style.css">
+                     <columns>
+                        <TableColumn fx:id="ColSponsorName" prefWidth="762.5999908447266" style="-fx-background-color: #0000; -fx-border-color: #ffff;" text="Sponsors" />
+                     </columns>
+                  </TableView>
+                  <MFXButton layoutX="752.0" layoutY="19.0" onAction="#Quit" style="-fx-background-color: #0000;" text="X" textFill="WHITE" />
+                  <Button layoutX="593.0" layoutY="143.0" mnemonicParsing="false" onAction="#exportProgram" prefHeight="27.0" prefWidth="159.0" style="-fx-background-color: #0000; -fx-border-color: #ffff; -fx-border-radius: 50;" text="EXPORT PROGRAM" textAlignment="CENTER" textFill="WHITE" />
+                  <HBox layoutX="576.0" layoutY="237.0" prefHeight="59.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="38.0" prefWidth="66.0" text="Prize:" textFill="#e7e5e5">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="prizeOverviewLabel" textFill="#eaeaea">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <Pane fx:id="pnlLeaderBoard" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <TableView fx:id="tableViewRunnersBoard" layoutX="16.0" layoutY="115.0" prefHeight="437.0" prefWidth="765.0" style="-fx-background-color: #0000; -fx-border-color: #ffff; -fx-border-radius: 0 0 30 30;" stylesheets="@style.css">
+                     <columns>
+                        <TableColumn fx:id="ColRankRunnerBoard" prefWidth="73.5999755859375" style="-fx-background-color: #0000; -fx-border-color: #ffff;" text="Rank" />
+                        <TableColumn fx:id="ColFirstNameRunnerBoard" prefWidth="231.20004272460938" style="-fx-background-color: #0000; -fx-border-color: #ffff;" text="First Name" />
+                        <TableColumn fx:id="ColLastNameRunnerBoard" prefWidth="223.20001220703125" style="-fx-background-color: #0000; -fx-border-color: #ffff;" text="Last Name" />
+                        <TableColumn fx:id="ColRecordRunnerBoard" prefWidth="151.20001220703125" style="-fx-background-color: #0000; -fx-border-color: #ffff;" text="Record" />
+                        <TableColumn fx:id="ColGenderRunnerBoard" prefWidth="89.5999755859375" style="-fx-background-color: #0000; -fx-border-color: #ffff;" text="Gender" />
+                     </columns>
+                  </TableView>
+                  <MFXButton layoutX="751.0" layoutY="14.0" onAction="#Quit" style="-fx-background-color: #0000;" text="X" textFill="WHITE" />
+                  <Label layoutX="46.0" layoutY="39.0" prefHeight="53.0" prefWidth="241.0" text="Leader Board" textFill="#e7e5e5">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+   <effect>
+      <DropShadow color="#1b1eeb" />
+   </effect>
+</AnchorPane>
